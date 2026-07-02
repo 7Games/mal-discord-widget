@@ -81,7 +81,7 @@ To leave the venv type
 deactivate
 ```
 
-Next is to have it run every couple hours. I have modified a bash script called `updater.sh` from (discord-steam-profile-widget)[https://github.com/xamionex/discord-steam-profile-widget] that'll run `refresh_mal.py` every 6 hours, on Linux to run it type
+Next is to have it run every couple hours. I have modified a bash script called `updater.sh` from [discord-steam-profile-widget](https://github.com/xamionex/discord-steam-profile-widget) that'll run `refresh_mal.py` every 6 hours, on Linux to run it type
 
 ```bash
 chmod +x updater.sh
