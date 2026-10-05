@@ -1,7 +1,7 @@
- - [-] Get data from MyAnimeList
+ - [x] Get data from MyAnimeList
    - [x] Get API token
-   - [ ] Find way to get all entries in users anime list
-   - [ ] Package up into Discord widget friendly structure
- - [-] Send it off to Discord
+   - [x] Find way to get all entries in users anime list
+   - [x] Package up into Discord widget friendly structure
+ - [x] Send it off to Discord
    - [x] Change user agent
-   - [ ] Structure JSON data (use [serde_json](https://crates.io/crates/serde_json)?)
+   - [x] Structure JSON data (use [serde_json](https://crates.io/crates/serde_json)?)
