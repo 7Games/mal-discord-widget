@@ -6,7 +6,6 @@ pub struct Environment {
     pub discord_app_id: String,
     pub discord_user_id: String,
 
-    pub mal_client_id: String,
     pub mal_user_name: String,
 
     pub discord_user_agent: String,
@@ -39,7 +38,6 @@ pub fn get_environments() -> Environment {
         discord_app_id: get_env("DISC_APP_ID"),
         discord_user_id: get_env("DISC_USER_ID"),
         // my anime list
-        mal_client_id: get_env("MAL_CLIENT_ID"),
         mal_user_name: get_env("MAL_USER_NAME"),
         // misc
         discord_user_agent: get_env("MAL_USER_AGENT"),
