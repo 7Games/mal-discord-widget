@@ -7,7 +7,7 @@ pub struct Environment {
     pub discord_user_id: String,
 
     pub mal_client_id: String,
-    pub mal_client_secret: String,
+    pub mal_user_name: String,
 
     pub discord_user_agent: String,
     pub mal_user_agent: String,
@@ -17,7 +17,7 @@ fn get_env(key: &str) -> String {
     match std::env::var(key) {
         Ok(str) => str,
         Err(e) => {
-            eprintln!("Couldn't get {key}, does it exist in .env? {e}");
+            eprintln!("ERROR: Couldn't get {key}, does it exist in .env? {e}");
             exit(1);
         }
     }
@@ -28,7 +28,7 @@ pub fn get_environments() -> Environment {
     match dotenv() {
         Ok(_) => {},
         Err(e) => {
-            eprintln!("Couldn't get environment vars, does .env exist? {e}");
+            eprintln!("ERROR: Couldn't get environment vars, does .env exist? {e}");
             exit(1);
         }
     }
@@ -40,7 +40,7 @@ pub fn get_environments() -> Environment {
         discord_user_id: get_env("DISC_USER_ID"),
         // my anime list
         mal_client_id: get_env("MAL_CLIENT_ID"),
-        mal_client_secret: get_env("MAL_CLIENT_SECRET"),
+        mal_user_name: get_env("MAL_USER_NAME"),
         // misc
         discord_user_agent: get_env("MAL_USER_AGENT"),
         mal_user_agent: get_env("DISC_USER_AGENT"),
