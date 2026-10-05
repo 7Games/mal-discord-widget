@@ -1,0 +1,11 @@
+[package]
+name = "mal-discord-widget"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dotenv = "0.15.0"
+reqwest = { version = "0.13.4", features = [ "blocking", "json" ] }
+scraper = "0.27.0"
+serde_json = "1.0.151"
+time = { version = "0.3.51", features = [ "parsing", "formatting", "macros" ] }

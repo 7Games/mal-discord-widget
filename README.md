@@ -1,4 +1,8 @@
-# MyAnimeList Discord Widgert
+# MyAnimeList Discord Widget
+
+## WARNING
+
+You can no longer create custom widgets on Discord, however if you have already created one in the past then you can modify it.
 
 ## How to setup
 
@@ -12,8 +16,6 @@ You can make the widget look however you like but make sure it has the following
 
 | Item name | User data name | Type |
 | --- | --- | --- |
-| Image | avatar | media |
-| Title | username | string |
 | Subtitle 1 | joindate | string |
 | Subtitle 2 | dayswatched | string |
 
@@ -28,60 +30,31 @@ You can make the widget look however you like but make sure it has the following
 | Stat #5 | onhold | number |
 | Stat #6 | totalanime | number |
 
-#### Mini Profile
-
-You can set `Stat` to be whatever you want but I just chose `watching`
-
 ### .env file
 
 Copy `.env.example` to `.env` and replace all the fields with what it asks
 
-### Setup a venv
+### Build
 
 In the terminal navigate to this folder and type
 
 ```bash
-python -m venv venv
+cargo build --release
 ```
 
-### Installing packages
+### Running
 
-Activate the venv
+Run it from the project root either with cargo or directly from the executable
 
 ```bash
-chmod +x venv/bin/activate
-. venv/bin/activate
+cargo run --release
 ```
-
-Then install the required packages
 
 ```bash
-pip install jikanpy-v4 dotenv
+./target/release/mal-discord-widget
 ```
 
-On some systems you may also need to install requests
-
-```bash
-pip install requests
-```
-
-### Test it
-
-Then while still in the venv enter
-
-```bash
-python refresh_mal.py
-```
-
-Check your profile, if it's updated then the program works
-
-To leave the venv type
-
-```bash
-deactivate
-```
-
-Next is to have it run every couple hours. I have modified a bash script called `updater.sh` from [discord-steam-profile-widget](https://github.com/xamionex/discord-steam-profile-widget) that'll run `refresh_mal.py` every 6 hours, on Linux to run it type
+Next is to have it run every couple hours. I have modified a bash script called `updater.sh` from [discord-steam-profile-widget](https://github.com/xamionex/discord-steam-profile-widget) that'll run `./mal-discord-widget` every 6 hours, on Linux to run it type
 
 ```bash
 chmod +x updater.sh

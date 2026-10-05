@@ -7,9 +7,7 @@ echo "Starting updates. Will run every 6 hours. Press Ctrl+C to stop, unless you
 
 while true; do
     echo "[$(date)] Updating..."
-    . ./venv/bin/activate
-    python refresh_mal.py
-    deactivate
+    ./mal-discord-widget
     echo "[$(date)] Finished, sleeping for 6 hours."
     sleep 21600
 done
