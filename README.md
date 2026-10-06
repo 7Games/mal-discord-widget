@@ -1,12 +1,17 @@
 # MyAnimeList Discord Widget
 
+![Made in Rust](https://img.shields.io/badge/Rust-orange?logo=rust&logoColor=white)
+![Licenced under Unlicense](https://img.shields.io/badge/License-Unlicense-black)
+![MyAnimeList app](https://img.shields.io/badge/MyAnimeList-2e51a2?logo=myanimelist)
+![Discord widget](https://img.shields.io/badge/Discord-5865f2?logo=discord&logoColor=white)
+
 ## WARNING
 
 You can no longer create custom widgets on Discord, however if you have already created one in the past then you can modify it.
 
-## How to setup
+<img src="./screenshot-1.png" alt="Screenshot of the Discord widget. In the top panel it shows the username, when the user joined MAL, and how many total days of anime watched. On the bottom panel it shows how many shows the user has watched, how many they plan to watch, how many they completed, how many they dropped, how many are on hold, and then the total amount of anime from the previous caterogies." title="Screenshot of the widget" width="500px" />
 
-LINUX ONLY, if you're on windows I recommend using WSL
+Only tested on Linux, but should probably work on Windows...
 
 ### Making the widget
 
