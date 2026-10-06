@@ -1,6 +1,6 @@
 [package]
 name = "mal-discord-widget"
-version = "2.1.0"
+version = "2.1.1"
 edition = "2024"
 authors = [ "Benjamin (svn)" ]
 description = "Scrape a users MAL page and send the data to a custom Discord Widget"
